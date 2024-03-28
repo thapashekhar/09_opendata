@@ -168,7 +168,7 @@ datmet_extracred <- extracred %>%
 
 ```{r}
 daymet_all <- field %>%
-  slice(1:5) %>%
+ # slice(1:5) %>%
   mutate(weather = pmap(list(.y = year,
                              .site = site,
                              .lat = lat,
@@ -181,7 +181,7 @@ daymet_all <- field %>%
 ```
 
 ```{r}
-daymet_all$weather[1]
+daymet_all
 ```
 
 Let's inspect weather data for the first site-year.  
